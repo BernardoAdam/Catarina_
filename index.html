@@ -15,50 +15,30 @@
       color: #444;
     }
 
+    /* Cabeçalho com degradê preto */
     header {
-      background: linear-gradient(to bottom, #000, #333 80%, transparent);
+      background: linear-gradient(to bottom, #000000, #222 80%, transparent);
       color: white;
-      padding: 30px 10px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+      padding: 40px 20px;
+      text-align: center;
     }
 
     header img {
-      width: 150px;
-      height: 150px;
-      border-radius: 30%;
+      width: 180px;
+      height: 180px;
+      border-radius: 40%;
       object-fit: cover;
       border: 4px solid #fff;
-      box-shadow: 0 0 15px rgba(255,255,255,0.3);
+      box-shadow: 0 0 12px rgba(255, 255, 255, 0.2);
       margin-bottom: 20px;
     }
 
     h1 {
       font-size: 2rem;
       margin: 0;
-      text-align: center;
     }
 
-    .timer {
-      font-size: 1.2rem;
-      margin-top: 10px;
-      text-align: center;
-    }
-
-    .hero-section {
-      background: url('foto1.jpg') no-repeat center center;
-      background-size: cover;
-      background-attachment: fixed;
-      height: 300px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      font-size: 1.5rem;
-      text-shadow: 0 1px 4px rgba(0,0,0,0.7);
-    }
-
+    /* Corpo em tons pastéis suaves */
     .section {
       padding: 40px 20px;
       max-width: 1000px;
@@ -82,8 +62,8 @@
     }
 
     .photos-group img {
-      border-radius: 20px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      border-radius: 18px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
       object-fit: cover;
       transition: transform 0.3s;
     }
@@ -92,30 +72,16 @@
       transform: scale(1.03);
     }
 
-    /* Tamanhos variados e orgânicos */
-    .photos-group img:nth-child(1) {
-      width: 220px;
-    }
-
-    .photos-group img:nth-child(2) {
-      width: 160px;
-    }
-
-    .photos-group img:nth-child(3) {
-      width: 240px;
-    }
-
-    .photos-group img:nth-child(4) {
-      width: 180px;
-    }
-
-    .photos-group img:nth-child(5) {
-      width: 200px;
-    }
+    /* Tamanhos variados */
+    .photos-group img:nth-child(1) { width: 220px; }
+    .photos-group img:nth-child(2) { width: 170px; }
+    .photos-group img:nth-child(3) { width: 250px; }
+    .photos-group img:nth-child(4) { width: 180px; }
+    .photos-group img:nth-child(5) { width: 210px; }
 
     .message {
       background-color: #ffeef5;
-      border-left: 5px solid #ff99cc;
+      border-left: 6px solid #ff99cc;
       margin: 20px auto;
       padding: 20px;
       font-style: italic;
@@ -124,6 +90,24 @@
       max-width: 800px;
       border-radius: 12px;
       box-shadow: 0 3px 6px rgba(0,0,0,0.05);
+    }
+
+    /* Cronômetro estilizado */
+    .timer-box {
+      background: #fff4f9;
+      border: 2px dashed #ffaad4;
+      margin: 40px auto;
+      padding: 20px;
+      max-width: 600px;
+      text-align: center;
+      font-size: 1.2rem;
+      border-radius: 15px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    .timer-box span {
+      font-weight: bold;
+      font-size: 1.3rem;
     }
 
     footer {
@@ -139,14 +123,9 @@
   <header>
     <img src="logo.jpg" alt="Logo do casal">
     <h1>Para minha Porquinha, Catarina 🐷💗</h1>
-    <div class="timer" id="relacionamento"></div>
   </header>
 
-  <div class="hero-section">
-    Nossos melhores momentos juntos 🌟
-  </div>
-
-  <!-- Bloco 1: Mensagem + Grupo de fotos -->
+  <!-- BLOCO 1 -->
   <section class="section pastel-bg">
     <div class="message">
       Catarina, desde que te conheci, tudo ficou mais leve, mais bonito, mais doce.  
@@ -156,27 +135,25 @@
     </div>
     <div class="photos-group">
       <img src="foto2.jpg" alt="Nós dois">
-      <img src="foto3.jpg" alt="Abraço">
-      <img src="foto4.jpg" alt="Risadas">
+      <img src="foto3.jpg" alt="Sorrisos">
+      <img src="foto4.jpg" alt="Cúmplices">
     </div>
   </section>
 
-  <!-- Bloco 2: Texto + fotos -->
+  <!-- BLOCO 2 -->
   <section class="section pastel-bg">
     <div class="message">
       Primeiro de tudo, valeu. Sério mesmo, obrigado por estar comigo, mesmo com todas as aderências que carrego nessa vida meio torta. Sei que não sou o cara mais fácil, nem o mais estável, mas você tá aqui. E isso vale mais que tudo.
 
       Quando você chegou, eu nem queria me envolver com ninguém. Relacionamento novo? Passava longe da minha cabeça. Eu tava só no meu canto, no meu mundinho... Aí pá, você entrou e bagunçou tudo. No melhor sentido possível.
-
-      Você é algo que eu nunca imaginei acontecendo na minha vida, e olha... ainda tô tentando entender como tive essa sorte.
     </div>
     <div class="photos-group">
-      <img src="foto5.jpg" alt="Brincadeiras">
-      <img src="foto6.jpg" alt="Beijo">
+      <img src="foto5.jpg" alt="Viagem">
+      <img src="foto6.jpg" alt="Abraço">
     </div>
   </section>
 
-  <!-- Bloco 3 -->
+  <!-- BLOCO 3 -->
   <section class="section pastel-bg">
     <div class="message">
       Tô feliz com você. Tipo, feliz de verdade. Você é linda, gostosa, perfeita, inteligente, fofa, engraçada, porquinha (do jeitinho mais fofo do mundo kkk). E mano, como é que pode a gente ter tanto gosto em comum? Até dor de crescimento nós temos junto kkkkk.
@@ -187,13 +164,27 @@
     </div>
   </section>
 
+  <!-- CRONÔMETRO FINAL -->
+  <div class="timer-box" id="relacionamento">
+    🕒 <span>Carregando tempo juntos...</span> ∞
+  </div>
+
+  <!-- DECLARAÇÃO FINAL -->
+  <section class="section pastel-bg">
+    <div class="message">
+      Era pra ser só um fluxo... só uma curtição. Mas olha a gente aqui. E eu, te esperando pra morar comigo, dividir vida, colher e tudo mais, sem julgamento, só amor.
+
+      Te amo, Infinito Para sempre!
+    </div>
+  </section>
+
   <footer>
     Feito com amor para Catarina 💕 2025
   </footer>
 
   <script>
     const startDate = new Date("2025-05-02T00:00:00");
-    const timer = document.getElementById("relacionamento");
+    const timer = document.querySelector("#relacionamento span");
 
     function updateTimer() {
       const now = new Date();
@@ -204,7 +195,7 @@
       const minutes = Math.floor((diff / (1000 * 60)) % 60);
       const seconds = Math.floor((diff / 1000) % 60);
 
-      timer.innerText = `Estamos juntos há: ${days} dias, ${hours}h ${minutes}m ${seconds}s 💞`;
+      timer.innerText = `Estamos juntos há: ${days} dias, ${hours}h ${minutes}m ${seconds}s`;
     }
 
     setInterval(updateTimer, 1000);
