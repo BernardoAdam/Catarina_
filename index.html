@@ -5,69 +5,116 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Para Catarina, minha Porquinha 💖</title>
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
-      background: #d0f0fd; /* azul bebê */
-      font-family: 'Segoe UI', sans-serif;
-      text-align: center;
       margin: 0;
-      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
       color: #444;
     }
 
     header {
-      background-color: #ffcce5; /* rosa bebê */
-      color: #444;
+      background: linear-gradient(to bottom, #000, #333 80%, transparent);
+      color: white;
       padding: 30px 10px;
       display: flex;
+      flex-direction: column;
       align-items: center;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 20px;
     }
 
     header img {
-      width: 80px;
-      height: 80px;
-      border-radius: 50%;
+      width: 150px;
+      height: 150px;
+      border-radius: 30%;
       object-fit: cover;
-      border: 3px solid white;
-      box-shadow: 0 0 8px rgba(0,0,0,0.1);
+      border: 4px solid #fff;
+      box-shadow: 0 0 15px rgba(255,255,255,0.3);
+      margin-bottom: 20px;
     }
 
     h1 {
-      font-size: 1.8rem;
+      font-size: 2rem;
       margin: 0;
-      max-width: 600px;
+      text-align: center;
     }
 
     .timer {
       font-size: 1.2rem;
       margin-top: 10px;
-      color: #333;
+      text-align: center;
+    }
+
+    .hero-section {
+      background: url('foto1.jpg') no-repeat center center;
+      background-size: cover;
+      background-attachment: fixed;
+      height: 300px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 1.5rem;
+      text-shadow: 0 1px 4px rgba(0,0,0,0.7);
     }
 
     .section {
-      padding: 30px 15px;
-      max-width: 900px;
+      padding: 40px 20px;
+      max-width: 1000px;
       margin: auto;
     }
 
-    .photos {
+    .pastel-bg:nth-child(odd) {
+      background-color: #d0f0fd; /* azul bebê */
+    }
+
+    .pastel-bg:nth-child(even) {
+      background-color: #d9f6f3; /* verde água */
+    }
+
+    .photos-group {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       gap: 20px;
+      margin: 30px 0;
     }
 
-    .photos img {
-      width: 200px;
-      height: auto;
+    .photos-group img {
       border-radius: 20px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      object-fit: cover;
+      transition: transform 0.3s;
+    }
+
+    .photos-group img:hover {
+      transform: scale(1.03);
+    }
+
+    /* Tamanhos variados e orgânicos */
+    .photos-group img:nth-child(1) {
+      width: 220px;
+    }
+
+    .photos-group img:nth-child(2) {
+      width: 160px;
+    }
+
+    .photos-group img:nth-child(3) {
+      width: 240px;
+    }
+
+    .photos-group img:nth-child(4) {
+      width: 180px;
+    }
+
+    .photos-group img:nth-child(5) {
+      width: 200px;
     }
 
     .message {
-      background-color: #fff5fa;
+      background-color: #ffeef5;
       border-left: 5px solid #ff99cc;
       margin: 20px auto;
       padding: 20px;
@@ -75,12 +122,14 @@
       text-align: left;
       white-space: pre-wrap;
       max-width: 800px;
-      border-radius: 8px;
+      border-radius: 12px;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.05);
     }
 
     footer {
       background: #ffcce5;
       color: #333;
+      text-align: center;
       padding: 15px;
     }
   </style>
@@ -89,70 +138,52 @@
 
   <header>
     <img src="logo.jpg" alt="Logo do casal">
-    <div>
-      <h1>Para minha Porquinha, Catarina 🐷💗</h1>
-      <div class="timer" id="relacionamento"></div>
-    </div>
+    <h1>Para minha Porquinha, Catarina 🐷💗</h1>
+    <div class="timer" id="relacionamento"></div>
   </header>
 
-  <section class="section">
-    <h2>Nossos Momentos</h2>
-    <div class="photos">
-      <img src="foto1.jpeg" alt="Nós dois">
-      <img src="foto2.jpeg" alt="Amor eterno">
-      <img src="foto3.jpeg" alt="Nosso sorriso">
- 	<img src="foto4.jpeg" alt="Nosso sorriso">
- 	<img src="foto5.jpeg" alt="Nosso sorriso">
- 	<img src="foto6.jpeg" alt="Nosso sorriso">
- 	<img src="foto7.jpeg" alt="Nosso sorriso">
-      <!-- Adicione mais se quiser -->
-    </div>
-  </section>
+  <div class="hero-section">
+    Nossos melhores momentos juntos 🌟
+  </div>
 
-  <section class="section">
-    <h2>Palavras do Coração 💌</h2>
+  <!-- Bloco 1: Mensagem + Grupo de fotos -->
+  <section class="section pastel-bg">
     <div class="message">
       Catarina, desde que te conheci, tudo ficou mais leve, mais bonito, mais doce.  
       Você é a minha alegria diária e meu porto seguro.  
       Eu sou grato por cada segundo ao seu lado.  
       Te amo hoje, amanhã e sempre.
     </div>
-    <div class="message">
-      Que esse amor continue crescendo, superando desafios e enchendo nosso mundo de esperança e carinho.
-    </div>
-    <div class="message">
-      Obrigado por ser exatamente quem você é: incrível, sensível, porquinha, linda.
+    <div class="photos-group">
+      <img src="foto2.jpg" alt="Nós dois">
+      <img src="foto3.jpg" alt="Abraço">
+      <img src="foto4.jpg" alt="Risadas">
     </div>
   </section>
 
-  <section class="section">
-    <h2>Declaração do Meu Coração 💖</h2>
+  <!-- Bloco 2: Texto + fotos -->
+  <section class="section pastel-bg">
     <div class="message">
       Primeiro de tudo, valeu. Sério mesmo, obrigado por estar comigo, mesmo com todas as aderências que carrego nessa vida meio torta. Sei que não sou o cara mais fácil, nem o mais estável, mas você tá aqui. E isso vale mais que tudo.
 
-      Quando você chegou, eu nem queria me envolver com ninguém. Relacionamento novo? Passava longe da minha cabeça. Eu tava só no meu canto, no meu mundinho... Aí pá, você entrou e bagunçou tudo. No melhor sentido possível. Você é algo que eu nunca imaginei acontecendo na minha vida, e olha... ainda tô tentando entender como tive essa sorte.
+      Quando você chegou, eu nem queria me envolver com ninguém. Relacionamento novo? Passava longe da minha cabeça. Eu tava só no meu canto, no meu mundinho... Aí pá, você entrou e bagunçou tudo. No melhor sentido possível.
 
-      E seja lá o que o futuro decidir pra nós, só o fato de ter você na minha vida já é algo que eu vou agradecer pra sempre. Você me transformou, me deu paz, bagunçou minha mente e arrumou meu coração.
+      Você é algo que eu nunca imaginei acontecendo na minha vida, e olha... ainda tô tentando entender como tive essa sorte.
+    </div>
+    <div class="photos-group">
+      <img src="foto5.jpg" alt="Brincadeiras">
+      <img src="foto6.jpg" alt="Beijo">
+    </div>
+  </section>
 
-      Tô feliz com você. Tipo, feliz de verdade. Você é linda, gostosa, perfeita, inteligente, fofa, engraçada, porquinha (do jeitinho mais fofo do mundo kkk). E mano, como é que pode a gente ter tanto gosto em comum? É tipo conexão real mesmo. Até dor de crescimento nós temos junto kkkkk. Só o lance do churrasco que não bate, né? Você pira e eu sou do contra, mas tudo certo.
+  <!-- Bloco 3 -->
+  <section class="section pastel-bg">
+    <div class="message">
+      Tô feliz com você. Tipo, feliz de verdade. Você é linda, gostosa, perfeita, inteligente, fofa, engraçada, porquinha (do jeitinho mais fofo do mundo kkk). E mano, como é que pode a gente ter tanto gosto em comum? Até dor de crescimento nós temos junto kkkkk.
 
-      E ó... eu quero uma família com você. Quero construir algo real. Saber que você pensa igual sobre filhos me deixa com o coração quentinho. Ter uma família contigo seria um dos maiores sonhos da minha vida realizado.
+      Quero uma família com você. Ter uma família contigo seria um dos maiores sonhos da minha vida realizado.
 
-      Nunca vou conseguir te agradecer o suficiente por realizar aquela viagem que eu sempre sonhei. Você fez isso por mim. E isso, minha gata, eu vou levar comigo pra sempre. Fico em dívida eterna contigo por isso, por me deixar feliz, por me fazer rir à toa, por fazer eu ver a vida com outros olhos, sair do piloto automático e acreditar que mereço viver coisas boas.
-
-      Você é minha prioridade. Mesmo com minha vida toda zoada, minha simplicidade, pouco dinheiro, sem carro com som, mesmo não sendo playboy e nem tendo um pug. Eu tô aqui, firme, pro que você precisar. Pra qualquer parada, qualquer situação.
-
-      E sim... tô só esperando o dia que você quiser casar comigo e morar junto. Porque, pra mim, já tô pronto. Tipo, prontíssimo. Mas eu entendo, você ainda tem que dar satisfação pros seus pais, né? Vai abrir mão de fazer unha, arrumar o cabelo, pra dividir conta com um fudido como eu kkkkk. Mas ó, se tu topar, eu tô aqui de braços abertos, e coração escancarado.
-
-      Quero aproveitar também pra pedir desculpa... por fumar, por beber de vez em quando, por ter esse passado meio zoado. Eu sei que não sou perfeito, e que às vezes posso até assustar, mas tô tentando sempre ser alguém melhor por você. Por nós.
-
-      Mesmo que às vezes eu não entenda tudo o que você faz ou sente, uma coisa é certa: você já é da minha vida, da minha família. Ganhou um cara cheio de problema, um cachorro peludo e um magrelo desajeitado, mas cheio de amor.
-
-      Aliás, a gente quer saber: quando é que você vai parar de falar que é tia deles e assumir que é mãe? Tamo só no aguardo, hein kkkk.
-
-      Era pra ser só um fluxo... só uma curtição. Mas olha a gente aqui. E eu, te esperando pra morar comigo, dividir vida, colher e tudo mais, sem julgamento, só amor.
-
-      Te amo, Infinito Para sempre!
+      Te amo. Infinito. Para sempre.
     </div>
   </section>
 
@@ -179,5 +210,6 @@
     setInterval(updateTimer, 1000);
     updateTimer();
   </script>
+
 </body>
 </html>
